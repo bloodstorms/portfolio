@@ -11,7 +11,7 @@ logo: /img/tiffanyvachez_logo.png
 # Build settings
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-redirect-from
