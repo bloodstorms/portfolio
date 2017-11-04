@@ -1,0 +1,18 @@
+# Site settings
+title: Tiffany Vachez
+email: tiffany.vachez@outlook.com
+description: "Visualisez simplement vos données en entreprise grâce à notre solution de data storytelling. Prenez des décisions informées à travers notre application, disponible sur mobile, tablettes et pc"
+baseurl: ""
+url: "https://tiffany.vachez.com"
+twitter_username: "tiffany_vachez"
+github_username: bloodstorms
+logo: /img/tiffanyvachez_logo.png
+
+# Build settings
+markdown: kramdown
+
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+  - jekyll-autoprefixer
