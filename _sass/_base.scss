@@ -105,6 +105,30 @@ nav.fixed {
   }
 }
 
+.nav__home a.current,
+.nav__about a.current,
+.nav__services a.current,
+.nav__skills a.current,
+.nav__portfolio a.current {
+  font-weight: bold;
+}
+
+.nav__home a.current {
+  color: #fff;
+}
+.nav__about a.current {
+  color: #f69027;
+}
+.nav__services a.current {
+  color: #0c539c;
+}
+.nav__skills a.current {
+  color: #569687;
+}
+.nav__portfolio a.current {
+  color: #fab003;
+}
+
 #return-home {
   margin-left: 25px;
 
@@ -517,6 +541,7 @@ i.fa.fa-angle-down:hover {
 }
 
 .footer__wrapper {
+  height: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -549,7 +574,7 @@ i.fa.fa-angle-down:hover {
 .footer__logo {
   width: 70px;
   height: auto;
-  margin-bottom: 50px;
+  margin: 50px 0;
 }
 
 footer p {
@@ -559,6 +584,8 @@ footer p {
   font-family: 'Dosis', arial, sans-serif;
   font-size: 11px;
   margin-bottom: 20px;
+  position: absolute;
+  bottom: 20px;
 }
 
 .footer__social-links {

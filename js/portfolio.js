@@ -48,29 +48,6 @@ $(document).ready(function(){
     });
   })(jQuery);
 
-  setTimeout(function(){
-
-  }, 3000);
-
-  // var mySwiper = new Swiper ('.swiper-container', {
-  //   effect: 'coverflow',
-  //   centeredSlides: true,
-  //   slidesPerView: 1.5,
-  //   loop: true,
-  //   coverflowEffect: {
-  //     rotate: 50,
-  //     stretch: 0,
-  //     depth: 100,
-  //     modifier: 1,
-  //     slideShadows : false,
-  //   },
-  //   pagination: {
-  //     el: '.swiper-pagination',
-  //     clickable: true,
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-  // })
   var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     centeredSlides: true,
@@ -93,4 +70,28 @@ $(document).ready(function(){
       clickable: true,
     },
   });
+
+  var top1 = $('#content').offset().top;
+  var top2 = $('#about').offset().top;
+  var top3 = $('#services').offset().top;
+  var top4 = $('#skills').offset().top;
+  var top5 = $('#portfolio').offset().top;
+  var top6 = $('#footer').offset().top;
+
+  $(document).scroll(function() {
+    var scrollPos = $(document).scrollTop();
+    $('.nav__home a, .nav__about a, .nav__services a, .nav__skills a, .nav__portfolio a').removeClass('current');
+    if (scrollPos >= top1 && scrollPos < top2) {
+      $('.nav__home a').addClass('current');
+    } else if (scrollPos >= top2 && scrollPos < top3) {
+      $('.nav__about a').addClass('current');
+    } else if (scrollPos >= top3 && scrollPos < top4) {
+      $('.nav__services a').addClass('current');
+    } else if (scrollPos >= top4 && scrollPos < top5) {
+      $('.nav__skills a').addClass('current');
+    } else if (scrollPos >= top5 && scrollPos < top6) {
+      $('.nav__portfolio a').addClass('current');
+    }
+  });
+
 });
