@@ -260,6 +260,7 @@ i.fa.fa-angle-down:hover {
 #about {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgba(255, 255, 255, .8);
   background: url('../img/graphic-pattern-sepia.jpg') repeat;
@@ -341,6 +342,7 @@ i.fa.fa-angle-down:hover {
 #services {
   display: flex;
   justify-content: center;
+  align-items: center;
   border-top: 4px double #0c539c;
 
   &:before {
@@ -423,6 +425,7 @@ i.fa.fa-angle-down:hover {
 #skills {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgba(255, 255, 255, .8);
   background: url('../img/tech-pattern.jpg') repeat;
@@ -471,6 +474,7 @@ i.fa.fa-angle-down:hover {
 #portfolio {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: rgba(255, 255, 255, .8);
   border-top: 4px double #fab003;
