@@ -1,7 +1,8 @@
 $(document).ready(function(){
 
   $(window).resize(function() { // Enter in the function when the window is rezised
-    $('#content').height($(window).height()); // Set the height of the window to the .content
+    console.log($(window).height());
+    $('#content, #about, #services, #skills').height($(window).height()); // Set the height of the window to the .content
   });
 
   $(window).trigger('resize'); // Add listener to resize function
@@ -24,4 +25,26 @@ $(document).ready(function(){
 		$('html, body').animate( { scrollTop: $(page).offset().top }, 600 ); // Scroll animation
 		return false;
 	});
+
+  (function($) {
+    "use strict";
+
+    $(".bar").each(function() {
+      var $bar = $(this),
+          $pct = $bar.find(".pct"),
+          data = $bar.data("bar");
+      setTimeout(function() {
+        $bar
+          .css("background-color", data.color)
+          .animate({
+            "width": $pct.html()
+        }, data.speed || 2000, function() {
+          $pct.css({
+            "color": data.color,
+            "opacity": 1
+          });
+        });
+      }, data.delay || 0);
+    });    
+  })(jQuery);
 });

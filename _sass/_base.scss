@@ -4,6 +4,7 @@ html {
   height: 100%;
   width: 100%;
   color: $text-color;
+  font-family: 'Open Sans', sans-serif;
 
   * {
     box-sizing: border-box;
@@ -76,7 +77,7 @@ nav li {
 
 nav a {
   color: #fff;
-  opacity: 0.8;
+  opacity: 0.9;
   letter-spacing: 2px;
   font-size: 11px;
   text-decoration: none;
@@ -95,7 +96,7 @@ nav a:hover {
 nav.fixed {
   position: fixed;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .nav__home {
@@ -114,10 +115,6 @@ nav.fixed {
 
 .logo-nav {
   height: 20px;
-}
-
-.wrapper {
-  padding-bottom: 82px;
 }
 
 #duContenu {
@@ -237,9 +234,170 @@ i.fa.fa-angle-down:hover {
 }
 
 #about {
-  height: 800px;
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-color: rgba(255, 255, 255, .8);
+  background: url('../img/graphic-pattern-sepia.jpg') repeat;
+  background-size: 270px;
+  border-top: 4px double #f69027;
+
+  &:before {
+    content: "\f0f4";
+    font-family: "FontAwesome";
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    top: -4px;
+    border: 4px double #f69027;
+    color: #f69027;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  .fa-angle-down {
+    color: #f69027;
+  }
+}
+
+.about__wrapper {
+  align-items: center;
+  display: flex;
+  width: 70%;
+  margin: auto;
+}
+
+.about__photo {
+  width: 255px;
+  height: 255px;
+  border: 4px solid #f69027;
+  border-radius: 50%;
+  margin-right: 50px;
+}
+
+.about__presentation-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.about__title {
+  strong {
+    color: #f69027;
+  }
+}
+
+.about__presentation {
+
+}
+
+#services {
+  display: flex;
+  justify-content: center;
+  border-top: 4px double #0c539c;
+
+  &:before {
+    content: "\f1b3";
+    font-family: "FontAwesome";
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    top: -4px;
+    border: 4px double #0c539c;
+    color: #0c539c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  .fa-angle-down {
+    color: #0c539c;
+  }
+}
+
+.services__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+}
+
+.services__row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.services__item {
+  margin: 30px 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex: 1;
+}
+
+.services__icon {
+  height: 70px;
+}
+
+.services__name {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Dosis', arial, sans-serif;
+  color: #0c539c;
+  text-align: center;
+  font-size: 21px;
+  line-height: 32px;
+}
+
+#skills {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  background: url('../img/tech-pattern.jpg') repeat;
+  background-size: 150px;
+  border-top: 4px double #96c4b9;
+
+  &:before {
+    content: "\f121";
+    font-family: "FontAwesome";
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    top: -4px;
+    border: 4px double #96c4b9;
+    color: #96c4b9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+}
+
+.skills__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  margin: auto;
+  height: 60%;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 4px;
+  border: solid 4px #d7e9e5;
 }
 
 .flex-container {
@@ -272,7 +430,34 @@ footer {
   bottom: 0;
   width: 100%;
   background-color: #fff;
-  padding: 10px 0;
+  padding: 100px 0 10px 0;
+  border-top: 4px double #909090;
+  position: relative;
+  // background: url('../img/graphic-pattern.jpg') repeat;
+  // background-size: 270px;
+
+  &:before {
+    content: "\f003";
+    font-family: "FontAwesome";
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: -40px;
+    border: 4px double #909090;
+    color: #00ace7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+}
+
+.footer__logo {
+  width: 70px;
+  height: auto;
+  margin-bottom: 50px;
 }
 
 footer p {
@@ -287,7 +472,7 @@ footer p {
 .footer__social-links {
   display: flex;
   font-size: 18px;
-  margin-bottom: 50px;
+  margin-bottom: 90px;
   color: $text-color;
 
   a {
@@ -331,6 +516,153 @@ footer p {
       border-radius: 2px;
       transform: rotate(45deg);
       transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);
+    }
+  }
+}
+
+//TEST
+@import url(https://fonts.googleapis.com/css?family=Roboto:700,400,300);
+
+$spacing: 1rem;
+$themeColor: #96c4b9;
+$backColor: #eee;
+$textShadow: rgba(black, 0.35) 1px 1px 1px;
+
+.container {
+  width: 70%;
+  padding: $spacing;
+  margin: 20px auto;
+  background-color: white;
+  h1 { text-align: center; }
+}
+
+.progress--circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: $spacing;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: $backColor;
+  &:before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: white;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: $themeColor;
+  }
+}
+
+.progress__number {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  line-height: 1;
+  margin-top: -0.75rem;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #bfe0d9;
+  font-family: 'Dosis', arial, sans-serif;
+  letter-spacing: 2px;
+}
+
+.progress__line {
+  height: 80px;
+  width: 3px;
+  background-color: #bfe0d9;
+  position: absolute;
+  top: 110%;
+  display: flex;
+  justify-content: center;
+
+  &::after {
+    position: absolute;
+    top: 110%;
+    color: #bfe0d9;
+    font-family: 'Dosis', arial, sans-serif;
+    letter-spacing: 2px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+.progress__line--left {
+  transform: rotate(30deg);
+  left: 10px;
+  top: 100%;
+  &::after {
+    content: "Angular.js";
+    transform: rotate(-30deg);
+  }
+}
+.progress__line--middle {
+  &::after {
+    content: "Jquery";
+  }
+}
+.progress__line--right {
+  transform: rotate(-30deg);
+  right: 10px;
+  top: 100%;
+  &::after {
+    content: "Vue.js";
+    transform: rotate(30deg);
+  }
+}
+.progress__line--middle-top {
+  height: 40px;
+  bottom: 110%;
+  top: auto;
+  &::after {
+    bottom: 110%;
+    top: auto;
+  }
+}
+.progress__line--html {
+  &::after {
+    content: "Jade/Pug";
+  }
+}
+.progress__line--css {
+  &::after {
+    content: "Sass/Scss";
+  }
+}
+.progress__line--js {
+  &::after {
+    content: "CoffeeScript";
+  }
+}
+
+
+$step: 5;
+$loops: round(100 / $step);
+$increment: 360 / $loops;
+$half: round($loops / 2);
+@for $i from 0 through $loops {
+  .progress--bar.progress--#{$i * $step}:after {
+    width: $i * $step * 1%;
+  }
+  .progress--circle.progress--#{$i * $step}:after {
+    @if $i < $half {
+      $nextDeg: 90deg + ($increment * $i);
+      background-image: linear-gradient(90deg, $backColor 50%, transparent 50%, transparent), linear-gradient($nextDeg, $themeColor 50%, $backColor 50%, $backColor);
+    }
+    @else {
+      $nextDeg: -90deg + ($increment * ($i - $half));
+      background-image: linear-gradient($nextDeg, $themeColor 50%, transparent 50%, transparent), linear-gradient(270deg, $themeColor 50%, $backColor 50%, $backColor);
     }
   }
 }

@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html style="background-color:black; height:100%; width:100%; display:flex; justify-content:center; align-items:center" {% if page.lang %} lang="{{ page.lang }}" {% endif %}>
+  <meta charset="utf-8">
+  <title>{{ site.title }}</title>
+  <link rel="canonical" href="{{ page.redirect.to }}">
+  <meta http-equiv="refresh" content="0; url={{ page.redirect.to }}">
+
+  <body>
+    <img class="logo" src="{{ site.baseurl }}/img/logo-bordered.png" style="height:150px; width:auto;" alt="logo-tiffany">
+  </body>
+
+  <script type="text/javascript">
+     window.location.href = "{{ page.redirect.to }}";
+  </script>
+</html>
