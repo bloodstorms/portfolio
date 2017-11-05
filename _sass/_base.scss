@@ -270,6 +270,11 @@ i.fa.fa-angle-down:hover {
   display: flex;
   width: 70%;
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 90%;
+  }
 }
 
 .about__photo {
@@ -278,6 +283,12 @@ i.fa.fa-angle-down:hover {
   border: 4px solid #f69027;
   border-radius: 50%;
   margin-right: 50px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 0;
+    width: 120px;
+    height: 120px;
+  }
 }
 
 .about__presentation-container {
@@ -289,10 +300,18 @@ i.fa.fa-angle-down:hover {
   strong {
     color: #f69027;
   }
+
+  @media screen and (max-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .about__presentation {
-
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    text-align: justify;
+  }
 }
 
 #services {
@@ -329,6 +348,10 @@ i.fa.fa-angle-down:hover {
   align-items: center;
   width: 70%;
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
 }
 
 .services__row {
@@ -344,10 +367,18 @@ i.fa.fa-angle-down:hover {
   align-items: center;
   flex-direction: column;
   flex: 1;
+
+  @media screen and (max-width: 768px) {
+    margin: 10px 5px;
+  }
 }
 
 .services__icon {
-  height: 70px;
+  height: 65px;
+
+  @media screen and (max-width: 768px) {
+    height: 55px;
+  }
 }
 
 .services__name {
@@ -356,8 +387,13 @@ i.fa.fa-angle-down:hover {
   font-family: 'Dosis', arial, sans-serif;
   color: #0c539c;
   text-align: center;
-  font-size: 21px;
-  line-height: 32px;
+  font-size: 18px;
+  line-height: 28px;
+
+  @media screen and (max-width: 768px) {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 
 #skills {
@@ -402,6 +438,10 @@ i.fa.fa-angle-down:hover {
   background-color: rgba(255, 255, 255, 1);
   border-radius: 4px;
   border: solid 4px #d7e9e5;
+
+  @media screen and (max-width: 768px) {
+    width: 95%;
+  }
 }
 
 #portfolio {
@@ -432,6 +472,39 @@ i.fa.fa-angle-down:hover {
   .fa-angle-down {
     color: #fab003;
   }
+}
+
+.portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 30px;
+  width: 100%;
+}
+
+.portfolio__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 33.3%;
+}
+
+.portfolio__item {
+  margin: 10px 30px;
+  width: 40%;
+  height: 100%;
+  flex: 4;
+
+  img {
+    width: 100%;
+  }
+}
+
+.portfolio__item--big {
+  width: 60%;
+  flex: 6;
 }
 
 #footer {
@@ -564,6 +637,12 @@ $textShadow: rgba(black, 0.35) 1px 1px 1px;
   height: 120px;
   border-radius: 50%;
   background-color: $backColor;
+
+  @media screen and (max-width: 768px) {
+    width: 70px;
+    height: 70px;
+  }
+
   &:before {
     content: '';
     position: absolute;
@@ -573,6 +652,13 @@ $textShadow: rgba(black, 0.35) 1px 1px 1px;
     height: 90px;
     border-radius: 50%;
     background-color: white;
+
+    @media screen and (max-width: 768px) {
+      width: 60px;
+      height: 60px;
+      top: 5px;
+      left: 5px;
+    }
   }
   &:after {
     content: '';
@@ -595,6 +681,11 @@ $textShadow: rgba(black, 0.35) 1px 1px 1px;
   color: #bfe0d9;
   font-family: 'Dosis', arial, sans-serif;
   letter-spacing: 2px;
+
+  @media screen and (max-width: 768px) {
+    margin-top: -0.6rem;
+    font-size: 1.2rem;
+  }
 }
 
 .progress__line {
@@ -629,6 +720,9 @@ $textShadow: rgba(black, 0.35) 1px 1px 1px;
 .progress__line--middle {
   &::after {
     content: "Jquery";
+  }
+  @media screen and (max-width: 768px) {
+    height: 90px;
   }
 }
 .progress__line--right {
@@ -683,5 +777,36 @@ $half: round($loops / 2);
       $nextDeg: -90deg + ($increment * ($i - $half));
       background-image: linear-gradient($nextDeg, $themeColor 50%, transparent 50%, transparent), linear-gradient(270deg, $themeColor 50%, $backColor 50%, $backColor);
     }
+  }
+}
+
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 90%;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: #fab003!important;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-image: none!important;
+
+  i {
+    font-size: 40px;
+    font-weight: 100;
+    color: #fab003;
   }
 }

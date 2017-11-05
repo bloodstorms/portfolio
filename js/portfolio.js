@@ -47,4 +47,50 @@ $(document).ready(function(){
       }, data.delay || 0);
     });
   })(jQuery);
+
+  setTimeout(function(){
+
+  }, 3000);
+
+  // var mySwiper = new Swiper ('.swiper-container', {
+  //   effect: 'coverflow',
+  //   centeredSlides: true,
+  //   slidesPerView: 1.5,
+  //   loop: true,
+  //   coverflowEffect: {
+  //     rotate: 50,
+  //     stretch: 0,
+  //     depth: 100,
+  //     modifier: 1,
+  //     slideShadows : false,
+  //   },
+  //   pagination: {
+  //     el: '.swiper-pagination',
+  //     clickable: true,
+  //     nextEl: '.swiper-button-next',
+  //     prevEl: '.swiper-button-prev',
+  //   },
+  // })
+  var swiper = new Swiper('.swiper-container', {
+    effect: 'coverflow',
+    centeredSlides: true,
+    slidesPerView: 1.5,
+    loop: true,
+    keyboard: true,
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows : false,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 });
