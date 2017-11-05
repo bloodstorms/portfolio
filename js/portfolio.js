@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   $(window).resize(function() { // Enter in the function when the window is rezised
     console.log($(window).height());
-    $('#content, #about, #services, #skills').height($(window).height()); // Set the height of the window to the .content
+    $('#content, #about, #services, #skills, #portfolio, #footer').height($(window).height()); // Set the height of the window to the .content
   });
 
   $(window).trigger('resize'); // Add listener to resize function
@@ -45,6 +45,6 @@ $(document).ready(function(){
           });
         });
       }, data.delay || 0);
-    });    
+    });
   })(jQuery);
 });

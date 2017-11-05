@@ -386,6 +386,10 @@ i.fa.fa-angle-down:hover {
     align-items: center;
     font-size: 40px;
   }
+
+  .fa-angle-down {
+    color: #96c4b9;
+  }
 }
 
 .skills__wrapper {
@@ -400,29 +404,46 @@ i.fa.fa-angle-down:hover {
   border: solid 4px #d7e9e5;
 }
 
-.flex-container {
-  height: auto;
+#portfolio {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 70%;
-  margin: auto;
-  flex-wrap: wrap;
+  width: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  border-top: 4px double #fab003;
+
+  &:before {
+    content: "\f0b1";
+    font-family: "FontAwesome";
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    position: absolute;
+    top: -4px;
+    border: 4px double #fab003;
+    color: #fab003;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+  }
+
+  .fa-angle-down {
+    color: #fab003;
+  }
 }
 
-.flex-item {
-  height: 240px;
-  width: 240px;
-  background-color: rgba(255,255,255,0.3);
-  /*border-radius: 15px;*/
-  margin: 10px;
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: url('../img/triangle-pattern.jpg') repeat;
+  background-size: 150px;
+  border-top: 4px double #909090;
 }
 
-.flex-item--large {
-  width: 340px;
-}
-
-footer {
+.footer__wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -433,8 +454,6 @@ footer {
   padding: 100px 0 10px 0;
   border-top: 4px double #909090;
   position: relative;
-  // background: url('../img/graphic-pattern.jpg') repeat;
-  // background-size: 270px;
 
   &:before {
     content: "\f003";
@@ -446,7 +465,7 @@ footer {
     position: absolute;
     top: -40px;
     border: 4px double #909090;
-    color: #00ace7;
+    color: #404040;
     display: flex;
     justify-content: center;
     align-items: center;
