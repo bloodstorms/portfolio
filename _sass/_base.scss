@@ -364,11 +364,23 @@ i.fa.fa-angle-down:hover {
 }
 
 .about__presentation {
-  margin: 10px 0;
+  padding: 10px 0 10px 15px;
+  margin: 0;
+  border-left: 3px solid #f69027;
+
+  &:nth-child(2) {
+    padding-top: 0;
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+
   @media screen and (max-width: 768px) {
     font-size: 14px;
     text-align: justify;
     margin: 5px 0;
+    padding: 0;
+    border: 0;
   }
   @media screen and (max-width: 360px) and (max-height: 640px) {
     font-size: 13px;
@@ -600,26 +612,25 @@ i.fa.fa-angle-down:hover {
   padding: 100px 0 10px 0;
   border-top: 4px double #909090;
   position: relative;
+}
 
-  &::before {
-    content: "\f003";
-    font-family: "FontAwesome";
-    height: 80px;
-    width: 80px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: -40px;
-    border: 4px double #909090;
-    color: #404040;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
+.footer__mail {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+  border: 4px double #909090;
+  color: #404040;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-decoration: none;
 
-    @media screen and (max-width: 768px) {
-      top: -30px;
-    }
+  @media screen and (max-width: 768px) {
+    top: -30px;
   }
 }
 
