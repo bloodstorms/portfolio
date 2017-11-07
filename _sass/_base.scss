@@ -17,6 +17,18 @@ html, body {
   overflow-x: hidden;
 }
 
+@-webkit-keyframes blink {
+  0% {
+      opacity: .8;
+  }
+  50% {
+      opacity: .1;
+  }
+  100% {
+      opacity: .8;
+  }
+}
+
 .loader {
   align-items: center;
   background-color: black;
@@ -29,6 +41,11 @@ html, body {
   top: 0;
   width: 100%;
   z-index: 9999;
+
+  img {
+    -webkit-animation: blink 2s;
+    -webkit-animation-iteration-count: infinite;
+  }
 
   h1, h2 {
     visibility: hidden;
