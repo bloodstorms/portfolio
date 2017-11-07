@@ -1,11 +1,11 @@
 $(document).ready(function(){
 
-  $(window).resize(function() { // Enter in the function when the window is rezised
+  $(window).resize(function() {
     console.log($(window).height());
-    $('#content, #about, #services, #skills, #portfolio, #footer').height($(window).height()); // Set the height of the window to the .content
+    $('#home, #about, #services, #skills, #portfolio, #footer').height($(window).height()); // Set the height of the window to the .home
   });
 
-  $(window).trigger('resize'); // Add listener to resize function
+  $(window).trigger('resize');
 
   $(window).scroll(function(){
     var $scrollTop = $(window).scrollTop(),
@@ -19,10 +19,10 @@ $(document).ready(function(){
     }
   });
 
-	$('.js-scrollTo').on('click', function() { // On click on the anchor .js-scrollTo
-		var page = $(this).attr('href'); // Select the href
+	$('.js-scrollTo').on('click', function() {
+		var page = $(this).attr('href');
 
-		$('html, body').animate( { scrollTop: $(page).offset().top }, 600 ); // Scroll animation
+		$('html, body').animate( { scrollTop: $(page).offset().top }, 600 );
 		return false;
 	});
 
@@ -71,7 +71,7 @@ $(document).ready(function(){
     },
   });
 
-  var top1 = $('#content').offset().top;
+  var top1 = $('#home').offset().top;
   var top2 = $('#about').offset().top;
   var top3 = $('#services').offset().top;
   var top4 = $('#skills').offset().top;
