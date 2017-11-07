@@ -17,6 +17,24 @@ html, body {
   overflow-x: hidden;
 }
 
+.loader {
+  align-items: center;
+  background-color: black;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+
+  h1, h2 {
+    visibility: hidden;
+  }
+}
+
 section {
   position: relative;
 }

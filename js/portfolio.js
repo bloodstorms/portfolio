@@ -1,3 +1,7 @@
+$(window).load(function(){
+  $('.loader').fadeOut();
+});
+
 $(document).ready(function(){
 
   $(window).resize(function() {
