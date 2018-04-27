@@ -5,7 +5,6 @@ $(window).load(function(){
 $(document).ready(function(){
 
   $(window).resize(function() {
-    console.log($(window).height());
     $('#home, #about, #services, #skills, #portfolio, #footer').height($(window).height()); // Set the height of the window to the .home
   });
 
